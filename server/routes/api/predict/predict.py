@@ -9,9 +9,6 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=UserWarning, module="lightgbm")
 
-# # loading a stored model
-# loaded_model = pickle.load(open('stacking_model.pkl', 'rb')) # rb - reading in binary 
-
 # Get user inputs
 
 absent_options = ["Not-At-All", "Rarely", "Frequently", "Mostly"]
@@ -30,73 +27,17 @@ with open(model_path, 'rb') as model:
     loaded_model = pickle.load(model)
 
 
-# absent = input("Enter Absent status: ")
-# while absent not in absent_options:
-#     absent = input("Invalid input. Please enter a valid Absent status: ")
 absent = sys.argv[2]
-
-# health_status = input("Enter Health Status: ")
-# while health_status not in health_status_options:
-#     health_status = input("Invalid input. Please enter a valid Health Status: ")
 health_status = sys.argv[3]
-
 financial_status = sys.argv[4]
 alcohol_consumption = sys.argv[5]
 student_gender = sys.argv[6]
-
-# study_mode = input("Enter Mode of Study: ")
-# while study_mode not in study_mode_options:
-#     study_mode = input("Invalid input. Please enter a valid Mode of Study: ")
 study_mode = sys.argv[7]
-
-# repeated = input("Enter Repeated status: ")
-# while repeated not in repeated_options:
-#     repeated = input("Invalid input. Please enter a valid Repeated status: ")
 repeated = sys.argv[8]
-
-# extra_support = input("Enter Extra Support Taken by University: ")
-# while extra_support not in extra_support_options:
-#     extra_support = input("Invalid input. Please enter a valid Extra Support status: ")
 extra_support = sys.argv[9]
-
-# student_age = None
-# while student_age is None or not (1 < student_age < 30):
-#     try:
-#         student_age = int(input("Enter Student Age: "))
-#         if not (1 < student_age < 30):
-#             print("Invalid input. Age must be between 2 and 29.")
-#     except ValueError:
-#         print("Invalid input. Please enter a valid Student Age.")
 student_age = int(sys.argv[10])
-
-# study_time = None
-# while study_time is None or not (0 <= study_time <= 24):  # Assuming study time is in hours
-#     try:
-#         study_time = float(input("Enter Study Time Allocated (in hours): "))
-#         if not (0 <= study_time <= 24):
-#             print("Invalid input. Study time must be between 0 and 24 hours.")
-#     except ValueError:
-#         print("Invalid input. Please enter a valid Study Time Allocated.")
 study_time = float(sys.argv[11])
-
-# first_year_average = None
-# while first_year_average is None or not (0 <= first_year_average <= 100):
-#     try:
-#         first_year_average = float(input("Enter First Year Average: "))
-#         if not (0 <= first_year_average <= 100):
-#             print("Invalid input. First Year Average must be between 0 and 100.")
-#     except ValueError:
-#         print("Invalid input. Please enter a valid First Year Average.")
 first_year_average = float(sys.argv[12])
-
-# second_year_average = None
-# while second_year_average is None or not (0 <= second_year_average <= 100):
-#     try:
-#         second_year_average = float(input("Enter Second Year Average: "))
-#         if not (0 <= second_year_average <= 100):
-#             print("Invalid input. Second Year Average must be between 0 and 100.")
-#     except ValueError:
-#         print("Invalid input. Please enter a valid Second Year Average.")
 second_year_average = float(sys.argv[13])
         
         
@@ -140,8 +81,6 @@ def age_group(df):
             age_group.append("Age_25")
         elif (i>=26):
             age_group.append("Age_26+")
-        # else:
-        #     age_group.append(np.nan)
 
     df["Age Group"] = age_group
 
@@ -164,8 +103,6 @@ def study_time_group(df):
             study_time_group.append("3-4 hours")
         elif (i>20):
             study_time_group.append("More than 4 hours")
-        # else:
-        #     study_time_group.append(np.nan)
 
     df["Study Time Group"] = study_time_group
     
@@ -185,8 +122,6 @@ def first_year_average_group(df):
             first_group.append("Third")
         elif (i<40):
             first_group.append("Refer")
-        # else:
-        #     first_group.append(np.nan)
 
     df["First Year Average Group"] = first_group
     
@@ -207,8 +142,6 @@ def second_year_average_group(df):
             second_group.append("Third")
         elif (i<40):
             second_group.append("Refer")
-        # else:
-        #     second_group.append(np.nan)
 
     df["Second Year Average Group"] = second_group
     
@@ -321,20 +254,6 @@ features = student[[ # label encoded ordinal categorical features
                     "Age Group", "Study Time Group", "First Year Average Group", "Second Year Average Group",
                     # transformed existing features
                     "Study Time Allocated Powered", "First Year Average Powered", "Second Year Average Powered"]]
-
-
-# features = student[[ # label encoded ordinal categorical features
-#                     "Absent", "Health Status",
-#                     # hot encoded nominal categorical features
-#                     "Mode of Study_Full-Time", "Mode of Study_Part-Time", "Repeated_No", "Repeated_Yes", "Extra Support Taken by University_No", "Extra Support Taken by University_Yes", 
-#                     # discrete numerical features
-#                     "Student Age",
-#                     # continuous numerical features
-#                     "Study Time Allocated", "First Year Average", "Second Year Average",
-#                     # newly created features by grouping - label encoded
-#                     "Age Group", "Study Time Group", "First Year Average Group", "Second Year Average Group",
-#                     # transformed existing features
-#                     "Study Time Allocated Powered", "First Year Average Powered", "Second Year Average Powered"]]
 
 from sklearn.preprocessing import StandardScaler
 
