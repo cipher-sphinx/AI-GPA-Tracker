@@ -1,0 +1,36 @@
+/* Style the form container */
+form {
+    max-width: 400px; /* Adjust the width as needed */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style form labels */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  /* Style form inputs */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style form select inputs */
+  .form-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Style the Save and Close buttons */
+  .MDBBtn {
+    margin-right: 10px;
+  }
+  

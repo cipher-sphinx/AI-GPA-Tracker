@@ -1,0 +1,20 @@
+.attendance-container {
+  margin-top: 19%;
+  /* margin: 20px; */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.title-container {
+  margin-bottom: 20px;
+}
+
+.calendar-tile {
+  background-color: white;
+}
+
+.highlight {
+  background-color: #90EE90;  /* Light green color */
+}

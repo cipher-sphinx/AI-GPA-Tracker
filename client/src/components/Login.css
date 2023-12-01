@@ -1,0 +1,47 @@
+.login-container {
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.26);
+    background-color: #fff3cd;
+    padding: 20px;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+}
+
+.summer-tabs {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #FFA500;
+}
+
+.tabs-item {
+    color: #FFA500;
+}
+
+.tabs-link.active {
+    color: #fff;
+    background-color: #FFA500;
+    border-radius: 5px;
+}
+
+.input {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #FFA500;
+}
+
+.input-label {
+    color: #FFA500;
+}
+
+.summer-btn {
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.summer-btn:hover {
+    background-color: #ff8c00;
+}

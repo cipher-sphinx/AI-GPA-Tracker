@@ -1,0 +1,9 @@
+/* profile.css */
+.profile-edit-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 1rem;
+  }
+  

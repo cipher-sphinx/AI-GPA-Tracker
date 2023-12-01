@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('https://www.mlive.com/resizer/sTvlPlc6iMoeFfP2f93_HA5Pebc=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/citpat/news_impact/photo/napoleon-high-school-graduation-2014-aa95e55bcb502501.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Tahoma', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #FFA500;
+    /* Orange text for summer vibe */
+}
+
+a {
+    color: #0D47A1;
+}
+
+.btn-primary {
+    background-color: #FFC107;
+    /* Yellow buttons */
+    border-color: #FFC107;
+}
+
+.summer-navbar {
+    background: linear-gradient(to right, #043927, #51826c);
+}
+
+.summer-navbar-brand {
+    color: white !important;
+    cursor: pointer;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+}
+
+.navbar-link {
+    color: white !important;
+    font-size: x-large;
+}
+
+.navbar-link:hover {
+    color: #FFD700 !important;
+}
+
+.MDBBtn {
+    color: black;
+}
+
+.profile-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-avatar {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profile-card {
+    background-color: #ffe8d6;
+    /* replace with the color you prefer */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+}
+
+.profile-card-info {
+    margin-bottom: 10px;
+}
+
+.profile-icon {
+    color: #ff7f50;
+    /* replace with the color you prefer */
+    margin-right: 20px; /* increase this as needed */
+}
+
+
+.profile-edit-button {
+    background-color: #ff7f50;
+    /* replace with the color you prefer */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+.profile-edit-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.input-card {
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.save-changes-btn {
+    background: #0D47A1;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.profile-pic-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.input-icon {
+    margin-right: 10px;
+}
